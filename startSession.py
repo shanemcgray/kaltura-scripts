@@ -27,7 +27,7 @@ k_type = KalturaSessionType.ADMIN
 expiry = 86400
 privileges = "disableentitlement"
 
-# This is the function all other scripts will call with startSession.StartSession()
+# This is the function all other scripts will call with startSession.client.setKs(startSession.StartSession())
 def StartSession():
 	result = client.session.start(secret, user_id, k_type, partner_id, expiry, privileges)
 	if result:
